@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>أكاديمية رفيقات النور</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+    background-image: url("your-background.jpg")
+    ;background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 1. الصفحة الرئيسية */
+   .home-page {
+background-color: #4b737c;
+background-image:
+
+url("imaga/background.jpg");
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+
+padding: 40px;
+
+   }
+
+
+        
+
+        .title {
+            font-size: 46px;
+            color: #f7f1f1;
+            font-weight: bold;
+            margin: 0 0 15px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .welcome {
+            font-size: 30px;
+            color: #f1eded;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .action-btn {
+            border: none;
+            background: linear-gradient(135deg, #d99a3d, #f0b84f);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 50px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            margin: 8px 0;
+        }
+
+        .action-btn:hover { transform: translateY(-3px) scale(1.03); }
+
+        /* 2. الأقسام */
+        .sections-page {
+            background-color:#4b737c;
+            background-image: url("imaga/background.jpg");
+            padding: 40px 35px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sections-title {
+            color:#f8f7f7;;
+            font-size: 38px;
+            font-weight: bold;
+            margin: 0 0 25px 0;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sections {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .section-card {
+            border: none;
+            min-height: 90px;
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-card:hover {
+            transform: translateY(-3px) scale(1.02);
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        .section-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #7b4b6b;
+            margin-bottom: 4px;
+        }
+
+        .section-description {
+            font-size: 13px;
+            color: #665b60;
+        }
+
+        /* الصفحات الفرعية وتفاصيلها */
+        .details-page, .wird-page, .adhkar-page, .quiz-page {
+            background-image: url("imaga/background.jpg");
+            padding: 40px 30px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-box { text-align: center; margin-bottom: 25px; }
+
+        .header-box h2 {
+            font-size: 36px;
+            color: white;
+            margin: 0 0 8px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-box p {
+            font-size: 18px;
+            color: #fff8e7;
+            margin: 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-button {
+            border: none;
+            background: rgba(255, 255, 255, 0.85);
+            color: #7b4b6b;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 35px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .back-button:hover { background: white; transform: scale(1.05); }
+
+        /* كروت التفاصيل */
+        .info-card {
+            background-color: #4b737c;
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .info-title { font-size: 22px; font-weight: bold; color: #7b4b6b; margin-bottom: 8px; }
+        .info-desc { font-size: 18px; color: #4a3e45; font-weight: bold; }
+        .status-badge { display: inline-block; padding: 5px 15px; border-radius: 10px; font-size: 14px; margin-top: 5px; color: white; }
+        .bg-green { background-color: #2e7d32; }
+        .bg-orange { background-color: #e65100; }
+
+        /* شبكة الأيام */
+        .days-grid {
+            width: 100%;
+            max-width: 650px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .day-card {
+            background: rgba(255, 255, 255, 0.92);
+            border: none;
+            border-radius: 18px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .day-card:hover { background: rgba(255, 255, 255, 0.98); transform: translateY(-3px); }
+        .day-title { font-size: 22px; font-weight: bold; color: #7b4b6b; margin-bottom: 5px; }
+        .day-subtitle { font-size: 14px; color: #665b60; }
+
+        .episodes-grid {
+            width: 100%;
+            max-width: 650px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+            max-height: 450px;
+            overflow-y: auto;
+        }
+
+        .episode-card {
+            background: rgba(255, 255, 255, 0.93);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: right;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .episode-time { font-size: 17px; font-weight: bold; color: #d99a3d; margin-bottom: 6px; }
+        .episode-desc { font-size: 14px; color: #4a3e45; line-height: 1.5; font-weight: bold; }
+
+        /* وردك اليومي والأذكار */
+        .wird-container, .adhkar-container { width: 100%; max-width: 650px; display: flex; flex-direction: column; gap: 20px; }
+
+        .quran-box {
+            background-color: #739da7;
+            border-radius: 20px;
+            padding: 25px;
+            text-align: justify;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .quran-text { font-size: 21px; line-height: 2.2; color: #222; min-height: 180px; }
+
+        .page-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .page-controls button {
+            background: #7b4b6b;
+            color:#4b737c;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .tracker-box {
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 6px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .day-node {
+            background: #e0e0e0;
+            border-radius: 8px;
+            padding: 8px 2px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .day-node.completed { background: #4caf50; color: white; }
+
+        .honor-roll {
+            background: linear-gradient(135deg, rgba(255,248,225,0.95), rgba(255,236,179,0.95));
+            border: 2px solid #f0b84f;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .honor-title { font-size: 20px; color: #b78103; font-weight: bold; margin-bottom: 5px; }
+
+        /* الأذكار */
+        .adhkar-list {
+            max-height: 420px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .dhikr-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: right;
+        }
+
+        .dhikr-text { font-size: 18px; color: #222; line-height: 1.8; margin-bottom: 10px; font-weight: bold; }
+        .dhikr-info { font-size: 13px; color: #7b4b6b; margin-bottom: 10px; }
+
+        .counter-btn {
+            background: #7b4b6b;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 10px;
+            font-size: 15px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .tests-section {
+            margin: 35px auto;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .tests-section h2 {
+            color: #a95d70;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .tests-subtitle {
+            color: #765858;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .tests-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .test-card {
+            background: #fff;
+            border: 1px solid #ead5d5;
+            border-radius: 25px;
+            padding: 25px 18px;
+            box-shadow: 0 6px 18px rgba(120, 70, 80, 0.10);
+            transition: 0.3s;
+        }
+
+        .test-card:hover { transform: translateY(-5px); }
+
+        .test-icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #f8e7e9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .test-card h3 { color: #9f596b; font-size: 19px; margin-bottom: 10px; }
+        .test-card p { color: #806868; font-size: 14px; margin-bottom: 17px; line-height: 1.7; }
+
+        .test-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #c77b8b, #a95d70);
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 22px;
+            font-size: 14px;
+        }
+
+        .future-tests {
+            margin-top: 25px;
+            padding: 23px;
+            background: #fffaf4;
+            border: 1px dashed #d5ad69;
+            border-radius: 25px;
+        }
+
+        .future-icon { font-size: 30px; margin-bottom: 8px; }
+        .future-tests h3 { color: #a57536; margin-bottom: 8px; }
+        .future-tests p { color: #806d61; line-height: 1.8; }
+
+        .back-to-sections { margin-top: 30px; }
+
+        .back-to-sections a {
+            display: inline-block;
+            padding: 11px 30px;
+            border: 2px solid #c77b8b;
+            border-radius: 25px;
+            color: #a95d70;
+            background: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-to-sections a:hover { background: #c77b8b; color: white; }
+
+        @media (max-width: 600px) {
+            .tests-container { grid-template-columns: 1fr; }
+        }
+       /* تنسيقات كتاب المنير */
+.al-muneer-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.lesson-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border-right: 5px solid #0056b3;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lesson-title {
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 17px;
+}
+
+.lesson-video {
+    width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+        /* تنسيق مربعات القاعدة النورانية الجديد والمميز */
+.noorania-grid-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.noorania-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 15px;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: 460px;
+    overflow-y: auto;
+}
+
+/* تخصيص شكل شريط التمرير ليناسب التصميم */
+.noorania-grid::-webkit-scrollbar {
+    width: 8px;
+}
+.noorania-grid::-webkit-scrollbar-track {
+    background: rgba(245, 230, 240, 0.5);
+    border-radius: 10px;
+}
+.noorania-grid::-webkit-scrollbar-thumb {
+    background: #ead5d5;
+    border-radius: 10px;
+}
+.noorania-grid::-webkit-scrollbar-thumb:hover {
+    background: #7b4b6b;
+}
+
+.noorania-grid li {
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.noorania-grid li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 230, 240, 0.95));
+    color: #7b4b6b !important;
+    padding: 18px 12px;
+    border-radius: 15px;
+    text-decoration: none !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #ead5d5;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(123, 75, 107, 0.1);
+}
+
+.noorania-grid li a:hover {
+    background: linear-gradient(135deg, #7b4b6b, #9f596b);
+    color: white !important;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(123, 75, 107, 0.3);
+    border-color: #7b4b6b;
+}
+    
+        /* تنسيقات قسم الأسئلة الدينية */
+        .qa-section-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            font-family: 'Tahoma', sans-serif;
+            text-align: right;
+            direction: rtl;
+        }
+        .qa-section-container h2 {
+            color: #2c4a3e;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            border-bottom: 2px solid #e2e8e4;
+            padding-bottom: 10px;
+        }
+        .qa-section-container p { color: #4a5c53; font-size: 14px; }
+        .qa-section-container textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            border: 1px solid #cbd5d0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            font-family: 'Tahoma', sans-serif;
+            font-size: 14px;
+            background-color: #fafbf9;
+            resize: vertical;
+        }
+        .qa-section-container textarea:focus {
+            outline: none;
+            border-color: #3b6d57;
+            background-color: #fff;
+        }
+        .qa-section-container button {
+            background-color: #3b6d57;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .qa-section-container button:hover { background-color: #2c5241; }
+
+        /* كود QR والانضمام */
+        .qr-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .qr-img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 12px;
+            margin: 15px 0;
+            object-fit: contain;
+        }
+
+        .join-link {
+            display: block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .page { width: 100%; min-height: 100vh; margin: 0; }
+            .sections, .days-grid, .episodes-grid { grid-template-columns: 1fr; }
+            .tracker-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main id="homePage" class="page home-page">
+        <h1 class="title">أكاديمية رفيقات النور</h1>
+        <div class="welcome">تصحيح التلاوة</div>
+        <button class="action-btn" onclick="showSections()">التالي ➜</button>
+    </main>
+
+    <main id="sectionsPage" class="page sections-page">
+        <h1 class="sections-title">أقسام أكاديمية رفيقات النور</h1>
+
+        <section class="sections">
+            <button class="section-card" onclick="openTimingsPage()">
+                <span class="section-name">📖 أوقات تصحيح التلاوة</span>
+                <span class="section-description">أوقات الحلقات ومواعيدها التفصيلية.</span>
+            </button>
+            <button class="section-card" onclick="openWirdPage()">
+                <span class="section-name">🌙 وردكِ اليومي</span>
+                <span class="section-description">ورد صفحتين يومياً وتتبع الإنجاز.</span>
+            </button>
+            <button class="section-card" onclick="openZadAlQulub()">
+                <span class="section-name">🌿 زاد القلوب</span>
+                <span class="section-description">الحفظ بالترتيب ومتابعة حلقات الحفظ.</span>
+            </button>
+            <button class="section-card" onclick="openZadAlHafizat()">
+                <span class="section-name">🌸 زاد الحافظات</span>
+                <span class="section-description">الحفظ الحر مع المعلمات والأوقات.</span>
+            </button>
+            <button class="section-card" onclick="openAlMuneerPage()">
+                <span class="section-name">📕 دروس كتاب المنير</span>
+                <span class="section-description">الكتاب والدروس والمقاطع التعليمية الخاصة بالتجويد.</span>
+            </button>
+            <button class="section-card" onclick="openNooraniaPage()">
+                <span class="section-name">🌷 القاعدة النورانية</span>
+                <span class="section-description">دروس ومقاطع تأسيس القراءة الصحيحة.</span>
+            </button>
+            <button class="section-card" onclick="openTajweedQuizPage()">
+                <span class="section-name">📝 اختبارات التجويد</span>
+                <span class="section-description">اختبارات تفاعلية في أحكام التجويد.</span>
+            </button>
+            <button class="section-card" onclick="openQaPage()">
+                <span class="section-name">❓ أسئلة دينية</span>
+                <span class="section-description">احصلي على إجابات موثوقة لاستفساراتكِ.</span>
+            </button>
+            <button class="section-card" onclick="openAdminPanel()">
+                <span class="section-name">🔒 لوحة المشرفة</span>
+                <span class="section-description">خاصة بإدارة والرد على الأسئلة.</span>
+            </button>
+            <button class="section-card" onclick="openGenericSection('دروس الفقه', 'دروس مبسطة في فقه العبادات والمعاملات.')">
+                <span class="section-name">📚 دروس الفقه</span>
+                <span class="section-description">فقه الطهارة والصلاة وغيرها.</span>
+            </button>
+            <button class="section-card" onclick="openSeerahPage()">
+                <span class="section-name">📜 السيرة النبوية</span>
+                <span class="section-description">دروس وعطرة من حياة النبي صلى الله عليه وسلم.</span>
+            </button>
+            <!-- خانة شرح الأسماء الحسنى المضافة حديثاً -->
+            <button class="section-card" onclick="openAsmaaPage()">
+                <span class="section-name">✨ شرح الأسماء الحسنى</span>
+                <span class="section-description">معاني أسماء الله الحسنى وعطاياها.</span>
+            </button>
+            <button class="section-card" onclick="openAdhkarPage()">
+                <span class="section-name">☀️ أذكار الصباح والمساء</span>
+                <span class="section-description">حصّني نفسكِ بالأذكار اليومية.</span>
+            </button>
+            <button class="section-card" onclick="openJoinPage()">
+                <span class="section-name">💗 الانضمام إلى الأكاديمية</span>
+                <span class="section-description">انضمي لقنوات الأكاديمية عبر واتساب.</span>
+            </button>
+        </section>
+        <button class="back-button" style="margin-top:20px;" onclick="showHome()">⬅ العودة للرئيسية</button>
+    </main>
+
+    <main id="timingsPage" class="page details-page">
+        <div class="header-box">
+            <h2>📖 جدول أوقات تصحيح التلاوة</h2>
+            <p>اختر اليوم لعرض الحلقات والمواعيد التفصيلية:</p>
+        </div>
+
+        <section class="days-grid">
+            <button class="day-card" onclick="openDayPage('sundayPage')"><div class="day-title">📅 الأحد</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('mondayPage')"><div class="day-title">📅 الاثنين</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('tuesdayPage')"><div class="day-title">📅 الثلاثاء</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('wednesdayPage')"><div class="day-title">📅 الأربعاء</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('thursdayPage')"><div class="day-title">📅 الخميس</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('fridayPage')"><div class="day-title">📅 الجمعة</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+            <button class="day-card" onclick="openDayPage('saturdayPage')"><div class="day-title">📅 السبت</div><div class="day-subtitle">اضغطي لعرض الحلقات</div></button>
+        </section>
+
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- صفحة الأحد -->
+    <main id="sundayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الأحد ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٣٠</div><div class="episode-desc">نور يضيء الروح بالقرآن</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">آيات تحفظ القلب وتزكيه</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">هداية تشرق في الصدور</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">مخصصه لسورة البقره</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">طمأنينة تغشى الأنفاس</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٣٠</div><div class="episode-desc">آيات تثبت الأقدام</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">غذاء الروح وسكينة النفوس</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٨:٣٠</div><div class="episode-desc">ذكر يرتفع إلى السماء</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة الاثنين -->
+    <main id="mondayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الاثنين ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٣٠</div><div class="episode-desc">عطاء يثمر نوراً وبركة</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">درجات تعلى بالآيات</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">أجور تكتب بلا توقف</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">بصمة خير تبقى ولا تمحى</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ٢:٠٠</div><div class="episode-desc">مخصصه لسورة البقره</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">حروف ترتقي بك نحو الجنان</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٣٠</div><div class="episode-desc">آيات تبني قصوراً في الجنة</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">صحبة القرآن أمان وفلاح</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٨:٣٠</div><div class="episode-desc">نور يضيء العتمات</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة الثلاثاء -->
+    <main id="tuesdayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الثلاثاء ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٣٠</div><div class="episode-desc">نصيب وافر من النور والأجر</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">ترتيل يملأ الكون سكينة</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">رفعة في الدنيا والآخرة</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">أجر عظيم عند الله</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٣٠</div><div class="episode-desc">آيات تحفظ العبد وتسرده</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">طهارة للقلوب والأسماع</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٨:٣٠</div><div class="episode-desc">رياض الجنة في الدنيا</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٠٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة الأربعاء -->
+    <main id="wednesdayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الأربعاء ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٣٠</div><div class="episode-desc">ما تزرعينه اليوم سنراه نورا</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">آيات تحيي الموات في القلوب</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">هداية تضيء عتمة الدرب</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">مخصصه لسورة البقره</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">غراس مباركة تثمر أجراً</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٠٠</div><div class="episode-desc">نور يتسرب إلى الأعماق</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">آيات تشفع لصاحبها</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٩:٠٠</div><div class="episode-desc">مخصصه للتجويد</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة الخميس -->
+    <main id="thursdayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الخميس ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٠٠</div><div class="episode-desc">أنت دليلنا إلى القرآن</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">والقرآن دليلنا إلى الجنة</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">كلمات تفتح أبواب السماء</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">ربيع الأرواح ومأوى المطمئنين</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">آيات تزرع السلام الداخلي</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٣٠</div><div class="episode-desc">ترتيل يزيل هموم الدنيا</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٣٠</div><div class="episode-desc">نور يغشى الروح والجسد</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١0:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة الجمعة -->
+    <main id="fridayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم الجمعة ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٠٠</div><div class="episode-desc">آيات تقدس الأوقات</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">سورة الكهف</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">بقدر كل حرف يتدلى أجر</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">هداية تشرق في يوم الجمعة</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">آيات تقدس الأوقات</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٨:٣٠</div><div class="episode-desc">أجور مضعفة وبركات تترى</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- صفحة السبت -->
+    <main id="saturdayPage" class="page details-page">
+        <div class="header-box"><h2>✨ حلقات يوم السبت ✨</h2></div>
+        <section class="episodes-grid">
+            <div class="episode-card"><div class="episode-time">🌅 ٥:٣٠</div><div class="episode-desc">حضورك ليس درساً يلقى</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١٠:٠٠</div><div class="episode-desc">بل نور يُهدى وينور الدرب</div></div>
+            <div class="episode-card"><div class="episode-time">☀️ ١١:٠٠</div><div class="episode-desc">آيات ترتقي بالهمم</div></div>
+            <div class="episode-card"><div class="episode-time">📖 ١:٠٠</div><div class="episode-desc">مخصصه لسورة البقرة</div></div>
+            <div class="episode-card"><div class="episode-time">🕒 ٣:٠٠</div><div class="episode-desc">بداية مباركة بنور القرآن</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٥:٣٠</div><div class="episode-desc">أثر جميل لا يُمحى</div></div>
+            <div class="episode-card"><div class="episode-time">🌆 ٧:٠٠</div><div class="episode-desc">وبصمة تبقى في كل نجاح</div></div>
+            <div class="episode-card"><div class="episode-time">🌙 ٩:٠٠</div><div class="episode-desc">مخصصه للتجويد</div></div>
+            <div class="episode-card"><div class="episode-time">🌃 ١٠:٣٠</div><div class="episode-desc">قراءة سورة الملك كل ليلة قبل النوم تنجي صاحبها من عذاب القبر.</div></div>
+        </section>
+        <button class="back-button" onclick="openTimingsPage()">⬅ العودة لجدول الأيام</button>
+    </main>
+
+    <!-- وردك اليومي -->
+    <main id="wirdPage" class="page wird-page">
+        <div class="header-box">
+            <h2>🌙 وردكِ اليومي</h2>
+            <p>ورد صفحتين يومياً لختم القرآن الكريم بتدبر</p>
+        </div>
+
+        <div class="wird-container">
+            <div class="quran-box">
+                <div id="quranText" class="quran-text"></div>
+                <div class="page-controls">
+                    <button onclick="changePage(-1)">◀ الصفحة السابقة</button>
+                    <span id="pageIndicator" style="font-weight:bold; color:#7b4b6b;">صفحة 1 من 604</span>
+                    <button onclick="changePage(1)">الصفحة التالية 📑</button>
+                </div>
+            </div>
+
+            <button class="action-btn" style="width:100%; font-size:20px; background:linear-gradient(135deg, #1b5e20, #2e7d32);" onclick="markTodayCompleted()">✅ تم قراءة ورد اليوم بنجاح!</button>
+
+            <div class="tracker-box">
+                <div style="font-weight:bold; color:#7b4b6b; font-size:17px;">📅 سجل إنجازكِ الأسبوعي:</div>
+                <div class="tracker-grid" id="trackerGrid"></div>
+            </div>
+
+            <div class="honor-roll">
+                <div class="honor-title">👑 أفضل رفيقة نور</div>
+                <div id="streakText" style="font-size:15px; color:#555; font-weight:bold;">أنتِ في الطريق الصحيح! حافظي على الورد اليومي.</div>
+            </div>
+        </div>
+
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- زاد القلوب -->
+    <main id="zadAlQulubPage" class="page details-page">
+        <div class="header-box">
+            <h2>🌿 زاد القلوب</h2>
+            <p>الحفظ بالترتيب ومتابعة حلقات الحفظ</p>
+        </div>
+        <div class="info-card">
+            <div class="info-title">⏰ موعد التسميع الأسبوعي</div>
+            <div class="info-desc">كل جمعة الساعة 1:30 ظهراً</div>
+        </div>
+        <div class="info-card">
+            <div class="info-title">📖 جزء عم</div>
+            <span class="status-badge bg-green">تم الختم والتسميع ✓</span>
+        </div>
+        <div class="info-card">
+            <div class="info-title">📖 جزء تبارك</div>
+            <span class="status-badge bg-orange">قيد التسميع...</span>
+        </div>
+        
+        <div class="info-card" style="margin-top: 15px; background-color: rgba(255, 255, 255, 0.9); border-radius: 12px; padding: 15px; text-align: center;">
+            <div class="info-title" style="color: #25D366; font-weight: bold; font-size: 16px; margin-bottom: 8px;">خانة الانضمام</div>
+            <p style="margin: 0 0 12px 0; color: #333; font-size: 14px;">يمكنك الانضمام مباشرة عبر الرابط التالي:</p>
+            <a href="https://chat.whatsapp.com/EsPq7pm0NzFDLRXXTX9LRM" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">💬 اضغطي هنا للانضمام</a>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- زاد الحافظات -->
+    <main id="zadAlHafizatPage" class="page details-page">
+        <div class="header-box">
+            <h2>🌸 زاد الحافظات</h2>
+            <p>الحفظ الحر مع المعلمات والأوقات المتاحة</p>
+        </div>
+        <div class="info-card"><div class="info-title">المعلمة أمة الرحمن</div><div class="info-desc">الساعة 11:00 صباحاً - الأحد</div></div>
+        <div class="info-card"><div class="info-title">المعلمة أم آدم</div><div class="info-desc">الساعة 2:30 ظهراً - السبت</div></div>
+        <div class="info-card"><div class="info-title">المعلمة صبا</div><div class="info-desc">الساعة 8:00 مساءً - الاثنين</div></div>
+        <div class="info-card"><div class="info-title">المعلمة حلي</div><div class="info-desc">بعد العصر - الثلاثاء</div></div>
+        <div class="info-card"><div class="info-title">المعلمة صبا</div><div class="info-desc">الساعة 8:00 مساءً - الثلاثاء</div></div>
+        <div class="info-card"><div class="info-title">المعلمة صبا</div><div class="info-desc">الساعة 5:30 مساءً - الخميس</div></div>
+        <div class="info-card"><div class="info-title">المعلمة منى</div><div class="info-desc">الساعة 7:00 مساءً - الخميس</div></div>
+
+        <div class="info-card" style="margin-top: 15px; background-color: rgba(255, 255, 255, 0.9); border-radius: 12px; padding: 15px; text-align: center;">
+            <div class="info-title" style="color: #25D366; font-weight: bold; font-size: 16px; margin-bottom: 8px;">خانة الانضمام</div>
+            <p style="margin: 0 0 12px 0; color: #333; font-size: 14px;">يمكنك الانضمام مباشرة عبر الرابط التالي:</p>
+            <a href="https://chat.whatsapp.com/EMri935j1XiCU5Kl1a3viK" target="_blank" style="display: inline-block; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">💬 اضغطي هنا للانضمام</a>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- صفحة كتاب المنير والفيديوهات -->
+    <main id="alMuneerPage" class="page details-page">
+        <div class="header-box">
+            <h2>📖 دروس كتاب المنير في أحكام التجويد</h2>
+            <p>فهرس الدروس والمقاطع التعليمية المرئية</p>
+        </div>
+        <div class="al-muneer-container">
+ <ul class="lesson-list"></ul>
+ <li class="lesson-item">
+<div class="lesson-header"><span class="lesson-title">الدرس الأول:  </span></di>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0157 (1).mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item">
+<div class="lesson-header"><span class="lesson-title">الدرس الثاني:     </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0161.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item">
+<div class="lesson-header"><span class="lesson-title">الدرس الثالث:  </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0162.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item">
+<div class="lesson-header"><span class="lesson-title">الدرس الرابع</span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0163.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item">
+<div class="lesson-header"><span class="lesson-title">الدرس الخامس:</span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0164.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس السادس:   </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0162.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس السابع:    </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260729-WA0043.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الثامن:  </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260729-WA0045.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس التاسع:    </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260729-WA0047.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس العاشر:  </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260729-WA0048.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الحادي عشر:  </span></div>                          
+<video class="lesson-video" controls><source src="videos/VID-20260718-WA0144.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>      
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الثاني عشر: </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260801-WA0074.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الثالث عشر: </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260801-WA0095.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>                
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الرابع عشر: </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260818-WA0216.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>       
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس الخامس عشر: </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260823-WA0290.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+<li class="lesson-item"><div class="lesson-header"><span class="lesson-title">الدرس السادس عشر: </span></div>
+<video class="lesson-video" controls><source src="videos/VID-20260827-WA0289.mp4" type="video/mp4">متصفحك لا يدعم عرض الفيديو.</video>
+</li>
+</ul>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+   <!-- صفحة كتاب القاعدة النورانية (تم تحويلها إلى مربعات ملونة ومنسقة) -->
+<main id="nooraniaPage" class="page details-page">
+    <div class="header-box">
+        <h2>🌷 دروس كتاب القاعدة النورانية</h2>
+        <p>تأسيس القراءة الصحيحة وحروف الهجاء (17 درساً)</p>
+    </div>
+    
+    <div class="noorania-grid-container">
+        <ul class="noorania-grid">
+            <li><a href="https://youtu.be/wO2DRVC-g9w" target="_blank" rel="noopener">الدرس الأول: المفردة</a></li>
+            <li><a href="https://youtu.be/gY_BOUVMqxI" target="_blank" rel="noopener">الدرس الثاني: المركبة</a></li>
+            <li><a href="https://youtu.be/dXmgVgDnSQ4" target="_blank" rel="noopener">الدرس الثالث: المقطعة</a></li>
+            <li><a href="https://youtu.be/d5T5sUkZnx0" target="_blank" rel="noopener">الدرس الرابع: الحركات</a></li>
+            <li><a href="https://youtu.be/NltqYdG1D-E" target="_blank" rel="noopener">الدرس الخامس: التنوين</a></li>
+            <li><a href="https://youtu.be/MkkP3D8z7kI" target="_blank" rel="noopener">الدرس السادس: المد واللين</a></li>
+            <li><a href="https://youtu.be/4PyxmO2vO-M" target="_blank" rel="noopener">الدرس السابع: المد الطبيعي</a></li>
+            <li><a href="https://youtu.be/IRSimXTF9-c" target="_blank" rel="noopener">الدرس الثامن: السكون</a></li>
+            <li><a href="https://youtu.be/mNYli6aW_v8" target="_blank" rel="noopener">الدرس التاسع: الشدة</a></li>
+            <li><a href="https://youtu.be/tGjkXsazIQM" target="_blank" rel="noopener">الدرس العاشر: شدة وسكون</a></li>
+            <li><a href="https://youtu.be/EqJredlgbDA" target="_blank" rel="noopener">الدرس الحادي عشر</a></li>
+            <li><a href="https://youtu.be/oH6_jLcvzUc" target="_blank" rel="noopener">الدرس الثاني عشر</a></li>
+            <li><a href="https://youtu.be/p97yuoQu4hQ" target="_blank" rel="noopener">الدرس الثالث عشر</a></li>
+            <li><a href="https://youtu.be/vkdsx8S2y0c" target="_blank" rel="noopener">الدرس الرابع عشر</a></li>
+            <li><a href="https://youtu.be/0gINW5vhOU0" target="_blank" rel="noopener">الدرس الخامس عشر</a></li>
+            <li><a href="https://youtu.be/YFDac5KAyCQ" target="_blank" rel="noopener">الدرس السادس عشر</a></li>
+            <li><a href="https://youtu.be/DxMCM3ujfZc" target="_blank" rel="noopener">الدرس السابع عشر</a></li>
+        </ul>
+    </div>
+    
+    <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+</main>
+
+    <!-- صفحة السيرة النبوية (تكتب: قريباً) -->
+    <main id="seerahPage" class="page details-page" style="display: none;">
+        <div class="header-box">
+            <h2>📜 السيرة النبوية العطرة</h2>
+            <p>دروس ومحطات من حياة سيد المرسلين صلى الله عليه وسلم</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 20px; text-align: center; max-width: 600px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="font-size: 26px; color: #7b4b6b; font-weight: bold;">قريباً بإذن الله...</p>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- صفحة شرح الأسماء الحسنى (تكتب: قريباً) -->
+    <main id="asmaaPage" class="page details-page" style="display: none;">
+        <div class="header-box">
+            <h2>✨ شرح الأسماء الحسنى</h2>
+            <p>معاني أسماء الله الحسنى وعطاياها الإيمانية</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 20px; text-align: center; max-width: 600px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="font-size: 26px; color: #7b4b6b; font-weight: bold;">قريباً بإذن الله...</p>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- الأسئلة الدينية -->
+    <main id="qaPage" class="page details-page" style="display: none;">
+        <div class="qa-section-container">
+            <h2>❓ الأسئلة الدينية</h2>
+            <p>اطرح سؤالك أو تصفح الأسئلة السابقة</p>
+            
+            <div class="question-input-box">
+                <textarea id="userQuestion" placeholder="اكتب سؤالك هنا..." rows="3"></textarea>
+                <button class="submit-btn" onclick="submitQuestion()">إرسال السؤال</button>
+            </div>
+
+            <div class="adhkar-list" id="adhkarList" style="margin-top: 20px;"></div>
+
+            <div class="back-to-sections" style="margin-top: 30px; text-align: center;">
+                <button class="back-button" onclick="showSections()">← العودة للأقسام</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- لوحة المشرفة -->
+    <main id="adminPanel" class="page details-page" style="display: none;">
+        <div class="qa-section-container">
+            <h2>🔒 لوحة المشرفة</h2>
+            <p>خاصة فقط لإدارة، الرد، وحذف الأسئلة والإجابات</p>
+            
+            <div id="adminQuestionsList" style="margin-top: 20px;"></div>
+
+            <div class="back-to-sections" style="margin-top: 30px; text-align: center;">
+                <button class="back-button" onclick="closeAdminPanel()">← العودة للأقسام</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- أذكار الصباح والمساء -->
+    <main id="adhkarPage" class="page adhkar-page">
+        <div class="header-box">
+            <h2>☀️ أذكار الصباح والمساء 🌙</h2>
+            <p>حصّني نفسكِ بأذكار اليوم والليل</p>
+        </div>
+
+        <div class="adhkar-container">
+            <div style="display:flex; gap:10px; justify-content:center;">
+                <button class="action-btn" style="font-size:17px; padding:10px 25px;" onclick="showMorningAdhkar()">☀️ أذكار الصباح</button>
+                <button class="action-btn" style="font-size:17px; padding:10px 25px; background:linear-gradient(135deg,#5e35b1,#7e57c2);" onclick="showEveningAdhkar()">🌙 أذكار المساء</button>
+            </div>
+
+            <div class="adhkar-list" id="adhkarListContainer"></div>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- اختبارات التجويد -->
+    <main id="tajweedQuizPage" class="page quiz-page">
+        <section class="tests-section">
+            <h2>📝 الاختبارات العامة</h2>
+            <p class="tests-subtitle">اختبارات تمت أو ستتم هنا</p>
+
+            <div class="tests-container">
+                <div class="test-card">
+                    <div class="test-icon">📚</div>
+                    <h3>اختبار المخارج والصفات</h3>
+                    <p>اختبار في مخارج الحروف وصفاتها</p>
+                    <a href="#" class="test-btn">دخول الاختبار</a>
+                </div>
+
+                <div class="test-card">
+                    <div class="test-icon">🌸</div>
+                    <h3>اختبار الراء</h3>
+                    <p>اختبار خاص بأحكام الراء</p>
+                    <a href="#" class="test-btn">دخول الاختبار</a>
+                </div>
+            </div>
+
+            <div class="future-tests">
+                <div class="future-icon">📢</div>
+                <h3>اختبارات جديدة</h3>
+                <p>أي اختبارات ستُعلن في الأكاديمية ستُعرض هنا بإذن الله.</p>
+            </div>
+        </section>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- الانضمام إلى الأكاديمية -->
+    <main id="joinPage" class="page details-page">
+        <div class="header-box">
+            <h2>💗 الانضمام إلى الأكاديمية</h2>
+            <p>انضمي إلينا عبر القنوات الرسمية</p>
+        </div>
+        <div class="qr-card">
+            <div style="font-weight:bold; font-size:18px; color:#7b4b6b;">مجتمع أكاديمية رفيقات النور</div>
+            <img src="https://i.ibb.co/LdXvBfM/Screenshot-20260831-185300-com-whatsapp-edit-371002989345470.jpg" alt="QR Code" class="qr-img">
+            <a href="https://chat.whatsapp.com/DRkX9QCRi7v7yc0LSexGbM?s=cl&p=a&ilr=1" target="_blank" class="join-link">الانضمام عبر واتساب 💬</a>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <!-- الأقسام العامة (دروس الفقه وغيرها - تكتب: قريباً) -->
+    <main id="genericSectionPage" class="page details-page">
+        <div class="header-box">
+            <h2 id="sectionTitle">عنوان القسم</h2>
+            <p id="sectionDesc">تفاصيل القسم تظهر هنا...</p>
+        </div>
+        <div style="background: rgba(255,255,255,0.95); padding: 40px; border-radius: 20px; text-align: center; max-width: 600px; width: 100%; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <p style="font-size: 26px; color: #7b4b6b; font-weight: bold;">قريباً بإذن الله...</p>
+        </div>
+        <button class="back-button" onclick="showSections()">⬅ العودة للأقسام</button>
+    </main>
+
+    <script>
+        function hideAllPages() {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.style.display = 'none');
+        }
+
+        function showHome() {
+            hideAllPages();
+            document.getElementById('homePage').style.display = 'flex';
+        }
+
+        function showSections() {
+            hideAllPages();
+            document.getElementById('sectionsPage').style.display = 'flex';
+        }
+
+        function openTimingsPage() {
+            hideAllPages();
+            document.getElementById('timingsPage').style.display = 'flex';
+        }
+
+        function openDayPage(dayId) {
+            hideAllPages();
+            document.getElementById(dayId).style.display = 'flex';
+        }
+
+        function openZadAlQulub() {
+            hideAllPages();
+            document.getElementById('zadAlQulubPage').style.display = 'flex';
+        }
+
+        function openZadAlHafizat() {
+            hideAllPages();
+            document.getElementById('zadAlHafizatPage').style.display = 'flex';
+        }
+
+        function openAlMuneerPage() {
+            hideAllPages();
+            document.getElementById('alMuneerPage').style.display = 'flex';
+        }
+
+        function openNooraniaPage() {
+            hideAllPages();
+            document.getElementById('nooraniaPage').style.display = 'flex';
+        }
+
+        function openSeerahPage() {
+            hideAllPages();
+            document.getElementById('seerahPage').style.display = 'flex';
+        }
+
+        function openAsmaaPage() {
+            hideAllPages();
+            document.getElementById('asmaaPage').style.display = 'flex';
+        }
+
+        function openJoinPage() {
+            hideAllPages();
+            document.getElementById('joinPage').style.display = 'flex';
+        }
+
+        function openTajweedQuizPage() {
+            hideAllPages();
+            document.getElementById('tajweedQuizPage').style.display = 'flex';
+        }
+
+        function openGenericSection(title, desc) {
+            hideAllPages();
+            document.getElementById('sectionTitle').innerText = title;
+            document.getElementById('sectionDesc').innerText = desc;
+            document.getElementById('genericSectionPage').style.display = 'flex';
+        }
+
+        /* الورد اليومي */
+        let currentPage = 1;
+        const totalPages = 604;
+        
+        const quranPagesData = {
+            1: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (1) الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (2) الرَّحْمَٰنِ الرَّحِيمِ (3) مَالِكِ يَوْمِ الدِّينِ (4) إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (5) اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (6) صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (7)",
+            2: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ الم (1) ذَٰلِكَ الْكِتَابُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِلْمُتَّقِينَ (2) الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنْفِقُونَ (3) وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنْزِلَ إِلَيْكَ وَمَا أُنْزِلَ مِنْ قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ (4) أُولَٰئِكَ عَلَىٰ هُدًى مِنْ رَبِّهِمْ ۖ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ (5)"
+        };
+
+        function openWirdPage() {
+            hideAllPages();
+            document.getElementById('wirdPage').style.display = 'flex';
+            loadPageContent();
+            renderTracker();
+            checkStreak();
+        }
+
+        function loadPageContent() {
+            const text = quranPagesData[currentPage] || `[صفحة ${currentPage} - نص القرآن الكريم ينزل هنا]`;
+            document.getElementById('quranText').innerText = text;
+            document.getElementById('pageIndicator').innerText = `صفحة ${currentPage} من ${totalPages}`;
+        }
+
+        function changePage(step) {
+            if (currentPage + step >= 1 && currentPage + step <= totalPages) {
+                currentPage += step;
+                loadPageContent();
+            }
+        }
+
+        function markTodayCompleted() {
+            const todayIndex = new Date().getDay();
+            let history = JSON.parse(localStorage.getItem('wirdHistory') || '{}');
+            history[todayIndex] = true;
+            localStorage.setItem('wirdHistory', JSON.stringify(history));
+
+            let streak = parseInt(localStorage.getItem('wirdStreak') || '0') + 1;
+            localStorage.setItem('wirdStreak', streak);
+
+            renderTracker();
+            checkStreak();
+            alert("🎉 ما شاء الله! بارك الله في إنجازك اليوم.");
+        }
+
+        function renderTracker() {
+            const days = ['الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+            const history = JSON.parse(localStorage.getItem('wirdHistory') || '{}');
+            const grid = document.getElementById('trackerGrid');
+            grid.innerHTML = '';
+
+            days.forEach((day, idx) => {
+                const node = document.createElement('div');
+                node.className = 'day-node';
+                if (history[idx]) {
+                    node.classList.add('completed');
+                    node.innerText = day + ' ✓';
+                } else {
+                    node.innerText = day;
+                }
+                grid.appendChild(node);
+            });
+        }
+
+        function checkStreak() {
+            let streak = parseInt(localStorage.getItem('wirdStreak') || '0');
+            const streakDiv = document.getElementById('streakText');
+            if (streak > 0) {
+                streakDiv.innerHTML = `👑 أنجزتِ الورد لـ <b>${streak}</b> أيام متتالية، وأنتِ أفضل رفيقة نور اليوم! 🌟`;
+            }
+        }
+
+        /* الأذكار */
+        const morningAdhkar = [
+            { text: "أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ.", count: 1 },
+            { text: "اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ.", count: 1 },
+            { text: "سُبْحَانَ اللهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ.", count: 3 }
+        ];
+
+        const eveningAdhkar = [
+            { text: "أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ.", count: 1 },
+            { text: "اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ.", count: 1 },
+            { text: "أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ.", count: 3 }
+        ];
+
+        function openAdhkarPage() {
+            hideAllPages();
+            document.getElementById('adhkarPage').style.display = 'flex';
+            showMorningAdhkar();
+        }
+
+        function showMorningAdhkar() {
+            renderAdhkarList(morningAdhkar, "☀️ أذكار الصباح");
+        }
+
+        function showEveningAdhkar() {
+            renderAdhkarList(eveningAdhkar, "🌙 أذكار المساء");
+        }
+
+        function renderAdhkarList(list, title) {
+            const container = document.getElementById('adhkarListContainer');
+            container.innerHTML = `<h3 style="color:white; text-align:center; margin:5px 0;">${title}</h3>`;
+            
+            list.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = 'dhikr-card';
+                card.innerHTML = `
+                    <div class="dhikr-text">${item.text}</div>
+                    <div class="dhikr-info">التكرار المطلوب: <b>${item.count}</b> مرات</div>
+                    <button class="counter-btn" id="btn-dhikr-${index}" onclick="alert('تم التسبيح')">التكرار: ${item.count}</button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        /* الأسئلة الدينية ولوحة المشرفة مع ميزة الحذف */
+        function openQaPage() {
+            hideAllPages();
+            document.getElementById('qaPage').style.display = 'flex';
+            renderQuestions();
+        }
+
+        function submitQuestion() {
+            const input = document.getElementById('userQuestion');
+            if (!input || !input.value.trim()) {
+                alert("يرجى كتابة السؤال أولاً");
+                return;
+            }
+            let questions = JSON.parse(localStorage.getItem('academy_questions')) || [];
+            questions.push({
+                text: input.value.trim(),
+                answer: "",
+                status: "قيد الانتظار"
+            });
+            localStorage.setItem('academy_questions', JSON.stringify(questions));
+            input.value = "";
+            alert("تم إرسال سؤالك بنجاح!");
+            renderQuestions();
+        }
+
+        function renderQuestions() {
+            const list = document.getElementById('adhkarList');
+            if (!list) return;
+            let questions = JSON.parse(localStorage.getItem('academy_questions')) || [];
+            list.innerHTML = '';
+            if (questions.length === 0) {
+                list.innerHTML = '<p style="color: #806868; text-align: center;">لا توجد أسئلة مطروحة حالياً.</p>';
+                return;
+            }
+            questions.forEach((q) => {
+                list.innerHTML += `
+                    <div style="background: #fdf5f6; border: 1px solid #ead5d5; border-radius: 15px; padding: 15px; margin-bottom: 15px;">
+                        <p style="color: #333; font-weight: bold; margin-bottom: 5px;">السؤال: ${q.text}</p>
+                        <p style="color: #a95d70; font-size: 14px; margin-bottom: 5px;">الرد: ${q.answer ? q.answer : 'قيد المراجعة من المشرفة...'}</p>
+                        <span style="font-size: 12px; color: #806868;">الحالة: ${q.status}</span>
+                    </div>
+                `;
+            });
+        }
+
+        function openAdminPanel() {
+            const password = prompt("أدخل كلمة المرور الخاصة بلوحة المشرفة:");
+            if (password === "raficat-alnoor") {
+                hideAllPages();
+                document.getElementById('adminPanel').style.display = 'flex';
+                renderAdminQuestions();
+            } else if (password !== null) {
+                alert("كلمة المرور غير صحيحة! هذه اللوحة محمية.");
+            }
+        }
+
+        function closeAdminPanel() {
+            showSections();
+        }
+
+        function renderAdminQuestions() {
+            const list = document.getElementById('adminQuestionsList');
+            if (!list) return;
+            let questions = JSON.parse(localStorage.getItem('academy_questions')) || [];
+            list.innerHTML = '';
+            if (questions.length === 0) {
+                list.innerHTML = '<p style="color: #806868; text-align: center;">لا توجد أسئلة مرسلة من الطالبات حالياً.</p>';
+                return;
+            }
+            questions.forEach((q, index) => {
+                list.innerHTML += `
+                    <div style="background: #fdf5f6; border: 1px solid #ead5d5; border-radius: 15px; padding: 15px; margin-bottom: 15px;">
+                        <p style="color: #333; font-weight: bold; margin-bottom: 8px;">سؤال الطالبة: ${q.text}</p>
+                        <p style="color: #806868; font-size: 13px; margin-bottom: 10px;">الحالة: ${q.status}</p>
+                        <textarea id="answerInput-${index}" placeholder="اكتب رد المشرفة هنا..." rows="2" style="width: 100%; padding: 8px; border-radius: 10px; border: 1px solid #ead5d5; margin-bottom: 8px; font-family: inherit; box-sizing: border-box;">${q.answer || ''}</textarea>
+                        <div style="display: flex; gap: 10px;">
+                            <button onclick="saveAnswer(${index})" style="background: #a95d70; color: white; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; font-size: 13px;">حفظ ونشر الرد</button>
+                            <button onclick="deleteQuestion(${index})" style="background: #c62828; color: white; border: none; padding: 8px 15px; border-radius: 12px; cursor: pointer; font-size: 13px;">حذف السؤال والإجابة</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function saveAnswer(index) {
+            let questions = JSON.parse(localStorage.getItem('academy_questions')) || [];
+            const answerInput = document.getElementById(`answerInput-${index}`);
+            if (!answerInput || !answerInput.value.trim()) {
+                alert("يرجى كتابة الرد أولاً قبل الحفظ");
+                return;
+            }
+            questions[index].answer = answerInput.value.trim();
+            questions[index].status = "تم الرد ✓";
+            localStorage.setItem('academy_questions', JSON.stringify(questions));
+            alert("تم حفظ الرد ونشره بنجاح!");
+            renderAdminQuestions();
+        }
+
+        function deleteQuestion(index) {
+            if (confirm("هل أنتِ متأكدة من رغبتك في حذف هذا السؤال والإجابة نهائياً؟")) {
+                let questions = JSON.parse(localStorage.getItem('academy_questions')) || [];
+                questions.splice(index, 1);
+                localStorage.setItem('academy_questions', JSON.stringify(questions));
+                alert("تم الحذف بنجاح!");
+                renderAdminQuestions();
+            }
+        }
+    </script>
+  <!-- روبوت رفيقات النور الناطق بالحركات (محدث) -->
+<script>
+    // دالة لجعل المتصفح ينطق النص المشكول بصوت عربي
+    function speakText(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ar-SA';
+            utterance.rate = 0.9;
+            utterance.pitch = 1.0; 
+            
+            window.speechSynthesis.speak(utterance);
+        } else {
+            console.log("متصفحك لا يدعم خاصية التحدث الصوتي.");
+        }
+    }
+
+    // 1. الترحيب الصوتي التلقائي بالحركات أول ما تدخل الطالبة الموقع
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            speakText("أَهْلًا وَسَهْلًا بِكِ يَا غَالِيَةُ فِي أَكَادِيمِيَّةِ رَفِيقَاتِ النُّورِ لِتَصْحِيحِ التِّلَاوَةِ. اضْغطِي عَلَى زِرِ التَّالِي لِنَبْدَأَ رِحْلَتَنَا الْمُبَارَكَةَ.");
+        }, 1000);
+    });
+
+    // 2. ربط أصوات الروبوت بالأقسام مع التشكيل الكامل بالحركات (شاملة الأقسام الجديدة)
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        // زر "التالي"
+        const homeBtn = document.querySelector('.home-page .action-btn');
+        if(homeBtn) {
+            homeBtn.addEventListener('click', function() {
+                speakText("أَهْلًا بِكِ فِي أَقْسَامِ أَكَادِيمِيَّةِ رَفِيقَاتِ النُّورِ. اخْتَارِي الْقِسْمَ الَّذِي تَرْغَبِينَ بِهِ.");
+            });
+        }
+
+        // أوقات تصحيح التلاوة
+        document.querySelector("button[onclick*='openTimingsPage']")?.addEventListener('click', () => {
+            speakText("لَقَدْ دَخَلْتِ إِلَى جَدْولِ أَوْقَاتِ تَصْحِيحِ التِّلَاوَةِ. اخْتَارِي الْيَوْمَ الْمُنَاسِبَ لِعَرْضِ الْحَلَقَاتِ وَالْمَوَاعِيدِ التَّفْصِيلِيَّةِ.");
+        });
+
+        // الورد اليومي
+        document.querySelector("button[onclick*='openWirdPage']")?.addEventListener('click', () => {
+            speakText("مَرْحَبًا بِكِ فِي وِرْدِكِ الْيَوْمِيِّ. صَفْحَتَانِ يَوْمِيًّا لِخَتْمِ الْقُرْآنِ الْكَرِيمِ بِتَدَبُّرٍ.");
+        });
+
+        // زاد القلوب
+        document.querySelector("button[onclick*='openZadAlQulub']")?.addEventListener('click', () => {
+            speakText("قِسْمُ زَادِ الْقُلُوبِ. الْحِفْظُ بِالتَّرْتِيبِ وَمُتَابَعَةُ حَلَقَاتِ الْحِفْظِ الْأُسْبُوعِيَّةِ.");
+        });
+
+        // زاد الحافظات
+        document.querySelector("button[onclick*='openZadAlHafizat']")?.addEventListener('click', () => {
+            speakText("قِسْمُ زَادِ الْحَافِظَاتِ. الْحِفْظُ الْحُرُّ مَعَ الْمُعَلِّمَاتِ وَالْأَوْقَاتِ الْمُتَاحَةِ.");
+        });
+
+        // كتاب المنير
+        document.querySelector("button[onclick*='openAlMuneerPage']")?.addEventListener('click', () => {
+            speakText("دُرُوسُ كِتَابِ الْمُنِيرِ فِي أَحْكَامِ التَّجْوِيدِ، مَعَ الْمَقَاطِعِ التَّعْلِيمِيَّةِ الْمَرْئِيَّةِ.");
+        });
+
+        // القاعدة النورانية
+        document.querySelector("button[onclick*='openNooraniaPage']")?.addEventListener('click', () => {
+            speakText("دُرُوسُ كِتَابِ الْقَاعِدَةِ النُّورَانِيَّةِ لِتَأْسِيسِ الْقِرَاءَةِ الصَّحِيحَةِ وَحُرُوفِ الْهِجَاءِ.");
+        });
+
+        // اختبارات التجويد
+        document.querySelector("button[onclick*='openTajweedQuizPage']")?.addEventListener('click', () => {
+            speakText("قِسْمُ اخْتِبَارَاتِ التَّجْوِيدِ. اخْتَبِرِي مَعْلُومَاتِكِ فِي الْأَحْكَامِ وَالْمَخَارِجِ.");
+        });
+
+        // الأسئلة الدينية
+        document.querySelector("button[onclick*='openQaPage']")?.addEventListener('click', () => {
+            speakText("قِسْمُ الْأَسْئِلَةِ الدِّينِيَّةِ. اطْرَحِي سُؤَالَكِ أَوْ اسْتِفْسَارَكِ لِيَتَمَ الرَّدُّ عَلَيْكِ.");
+        });
+
+        // أذكار الصباح والمساء
+        document.querySelector("button[onclick*='openAdhkarPage']")?.addEventListener('click', () => {
+            speakText("أَذْكَارُ الصَّبَاحِ وَالْمَسَاءِ. حَصِّنِي نَفْسَكِ بِالْأَذْكَارِ الْيَوْمِيَّةِ مَعَ الْعَدَّادِ التَّفَاعُلِيِّ.");
+        });
+
+        // الانضمام
+        document.querySelector("button[onclick*='openJoinPage']")?.addEventListener('click', () => {
+            speakText("صَفْحَةُ الِانْضِمَامِ إِلَى الْأَكَادِيمِيَّةِ عَبْرَ قَنَوَاتِ الْوَاتْسَابِ الرَّسْمِيَّةِ.");
+        });
+
+        // السيرة النبوية (قريباً)
+        document.querySelector("button[onclick*='openSeerahPage']")?.addEventListener('click', () => {
+            speakText("قِسْمُ السِّيرَةِ النَّبَوِيَّةِ. سَيَتِمُّ إِضَافَةُ الدُّرُوسِ قَرِيبًا بِإِذْنِ اللَّهِ.");
+        });
+
+        // شرح الأسماء الحسنى (قريباً)
+        document.querySelector("button[onclick*='openAsmaaPage']")?.addEventListener('click', () => {
+            speakText("قِسْمُ شَرْحِ الْأَسْمَاءِ الْحُسْنَى. سَيَتِمُّ إِضَافَتُهَا قَرِيبًا بِإِذْنِ اللَّهِ.");
+        });
+
+        // دروس الفقه (قريباً - عبر دالة القسم العام)
+        document.querySelectorAll("button[onclick*='openGenericSection']").forEach(btn => {
+            if(btn.innerText.includes('دروس الفقه')) {
+                btn.addEventListener('click', () => {
+                    speakText("قِسْمُ دُرُوسِ الْفِقْهِ. سَيَتِمُّ إِضَافَتُهَا قَرِيبًا بِإِذْنِ اللَّهِ.");
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>
